@@ -1,0 +1,209 @@
+.payment-section {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    .wrap-payment {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-part {
+            min-width: 420px;
+            margin-right: 50px;
+
+            .pay-info {
+                margin-bottom: 45px;
+
+                p {
+                    margin-bottom: 30px;
+                    display: grid;
+
+                    font-size: 18px;
+                    grid-template-columns: repeat(2, minmax(100px, 210px));
+
+                    .val {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .card-info {
+                &__title {
+                    font-size: 19px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+                }
+
+                &__wrap {
+                    padding: 40px;
+                    border-radius: 15px;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 0px 8px 32.37px 6.63px rgba(143, 143, 143, 0.11);
+
+                    label {
+                        position: relative;
+
+                        p {
+                            font-size: 16px;
+                            margin-bottom: 15px;
+                        }
+
+                        input:not([type="submit"]) {
+                            border: 0;
+                            width: 100%;
+                            border-bottom: 1px solid #acacac;
+                            padding-bottom: 20px;
+                            -webkit-appearance: none;
+                            border-radius: 0;
+                        }
+
+                        .hint-wrap {
+                            position: absolute;
+                            right: 0;
+                            // top: 50%;
+                            bottom: 0;
+                            width: 20px;
+                            height: 20px;
+                            // -webkit-transform: translateY(-50%);
+                            // -ms-transform: translateY(-50%);
+                            // transform: translateY(50%);
+
+                            .hint-popup {
+                                position: absolute;
+                                visibility: hidden;
+                                width: 320px;
+                                padding: 20px;
+                                background: #fff;
+                                border-radius: 15px;
+                                font-size: 16px;
+                                line-height: 1.5;
+                                top: -100px;
+                                left: -20px;
+                                box-shadow: 0px 8px 32.37px 6.63px rgba(143, 143, 143, 0.11)
+                            }
+
+                            .hint-popup.show {
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+                    &__top {
+                        margin-bottom: 30px;
+                    }
+
+                    &__bottom {
+                        display: flex;
+                        margin-bottom: 30px;
+
+                        &__validity {
+                            margin-right: 20px;
+                        }
+                    }
+
+                    input[type="submit"] {
+                        border: 0;
+                        cursor: pointer;
+                    }
+
+                }
+
+
+            }
+        }
+
+        .banks {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(60px, 190px));
+            grid-gap: 60px;
+
+            a {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .payment-section .wrap-payment {
+        flex-direction: column;
+
+        .left-part {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+    }
+
+    .payment-section .wrap-payment .banks {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(60px, 190px));
+        grid-gap: 40px;
+        align-items: center;
+    }
+
+    .payment-section .wrap-payment .right-part {
+        width: 80%;
+        padding: 0 20px;
+    }
+
+    .payment-section .wrap-payment .left-part .card-info__wrap label .hint-wrap .hint-popup {
+        left: -270px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .payment-section .wrap-payment .right-part {
+        width: 100%;
+    }
+
+    .payment-section .wrap-payment .left-part {
+        min-width: 100%;
+    }
+
+}
+
+@media screen and(max-width: 480px) {
+    .payment-section .wrap-payment .left-part .card-info__wrap {
+        padding: 30px;
+    }
+
+    .payment-section .wrap-payment .left-part .card-info__wrap__bottom {
+        flex-direction: column;
+    }
+
+    .payment-section .wrap-payment .left-part .card-info__wrap__bottom__validity {
+        margin-right: 0;
+    }
+
+    .payment-section .wrap-payment .left-part .card-info__wrap__top,
+    .payment-section .wrap-payment .left-part .card-info__wrap__bottom,
+    .payment-section .wrap-payment .left-part .card-info__wrap__bottom__validity {
+        margin-bottom: 20px;
+    }
+
+    .payment-section .wrap-payment .left-part .pay-info {
+        margin-bottom: 35px;
+    }
+
+    .payment-section .wrap-payment .left-part .pay-info p {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        margin-bottom: 20px;
+    }
+
+    .payment-section .wrap-payment .right-part {
+        padding: 0;
+    }
+
+    .payment-section {
+        padding-top: 30px;
+    }
+
+    .payment-section .wrap-payment .left-part .card-info__wrap label .hint-wrap .hint-popup {
+        width: 270px;
+        left: -220px;
+        font-size: 14px;
+    }
+}

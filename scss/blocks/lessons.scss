@@ -1,0 +1,178 @@
+.lessons-section {
+    padding-top: 100px;
+
+
+    .wrap-lessons {
+        display: flex;
+        flex-direction: column;
+
+        &__block {
+            display: flex;
+            padding: 35px 40px;
+            margin-bottom: 50px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            box-shadow: 0px 8px 32.37px 6.63px rgba(143, 143, 143, 0.11);
+
+            &__img {
+                min-width: 508px;
+                margin-right: 5vw;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+            &__desc {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                &__name {
+                    font-size: 27px;
+                    font-weight: bold;
+                    margin-bottom: 25px;
+                }
+
+                &__text {
+                    margin-bottom: 35px;
+                    font-size: 20px;
+                    max-width: 570px;
+                    max-height: 180px;
+                    overflow: hidden;
+                    line-height: 1.5;
+                }
+
+                &__progress {
+                    display: flex;
+                    align-items: flex-end;
+
+                    .button {
+                        padding: 5px 30px;
+                        background: $light-yellow;
+                        margin-right: 2.2vw;
+                        height: 40px;
+                        white-space: nowrap;
+
+                    }
+
+                }
+
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    .lessons-section .wrap-lessons__block__img {
+        min-width: 400px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .lessons-section .wrap-lessons__block__img {
+        min-width: 300px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__text {
+        line-height: 1.3;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__name {
+        font-size: 24px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__text {
+        font-size: 18px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__progress .button {
+        font-size: 16px;
+        padding: 0 30px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .lessons-section .wrap-lessons__block__desc__progress {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+
+    .lessons-section .wrap-lessons__block__img {
+        margin-right: 2vw;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__progress .button {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lessons-section .wrap-lessons__block {
+        flex-direction: column;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .lessons-section .wrap-lessons__block__img {
+        min-width: 200px;
+        margin-right: 0;
+        height: 300px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .lessons-section .wrap-lessons__block__desc__name {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__text {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__progress {
+        margin-right: auto;
+        margin-left: 0;
+        align-items: flex-start;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+    .lessons-section {
+        padding-top: 50px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__progress .progress-bar {
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lessons-section .wrap-lessons__block__desc__progress {
+        margin-right: 0;
+        width: 100%;
+
+        .progress-bar {
+            width: 100%;
+        }
+    }
+
+    .lessons-section .wrap-lessons__block__desc__progress .button {
+        font-size: 14px;
+    }
+}

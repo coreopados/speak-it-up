@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+  // width: 100%;
+  // height: 100%;
+}
+
+body {
+  font-family: 'Montserrat';
+  overflow-x: hidden;
+  position: relative;
+}
+
+input::placeholder {
+  color: #d0d0d0;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+// main,
+// footer {
+//   overflow-x: hidden;
+// }
+
+.container {
+  max-width: 1360px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+$light-yellow:#fec504;
+$yellow:#d8a319;
+$darkblue:#081551;
+$red:#e31e24;
+$black:#191919;
+$fourth-screen-bg-red: #d9201f;
+
+p,
+ul,
+li {
+  margin: 0;
+}
+
+a {
+  color: $black;
+}
+
+.section-title {
+  font-size: 36px;
+}
+
+.black {
+  color: #000;
+}
+
+.white {
+  color: #fff;
+}
+
+.yellow {
+  background: #fec504;
+  color: #000;
+  transition: 0.2s;
+}
+
+.darkblue {
+  background: $darkblue;
+  color: #fff;
+  box-shadow: 0px 8px 32.37px 6.63px rgba(0, 94, 190, 0.11);
+  font-weight: bold;
+
+}
+
+.red {
+  background: $red;
+  color: #fff;
+  box-shadow: 0px 8px 32.37px 6.63px rgba(0, 94, 190, 0.11);
+  font-weight: bold;
+
+}
+
+.white-border {
+  border: 2px solid #fff;
+  text-transform: uppercase;
+}
+
+.red-border {
+  border: 2px solid $red;
+  color: $red;
+  text-transform: uppercase;
+}
+
+.yellow-border {
+  border: 2px solid $light-yellow;
+  color: $light-yellow;
+  text-transform: uppercase;
+}
+
+.yellow:hover {
+  box-shadow: 1px 1px 10px 2px #fec504;
+  transition: 0.2s;
+}
+
+ul {
+  padding-left: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.half-part {
+  width: 50%;
+}
+
+p {
+  font-size: 20px;
+  color: #404040;
+  line-height: 1.5;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.section-page {
+  height: 335px;
+  position: relative;
+  padding-top: 145px;
+
+  .section-page-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+
+
+.btn {
+  height: 55px;
+  line-height: 55px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0 35px;
+  font-size: 20px;
+}

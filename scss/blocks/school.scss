@@ -1,0 +1,286 @@
+.lessons-section {
+    padding-top: 100px;
+
+
+    .wrap-school {
+        display: flex;
+        flex-direction: column;
+
+        &__block {
+            display: flex;
+            padding: 60px 90px;
+            margin-bottom: 50px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            box-shadow: 0px 8px 32.37px 6.63px rgba(143, 143, 143, 0.11);
+
+            &__img {
+                min-width: 245px;
+                max-width: 245px;
+                height: 245px;
+                margin-right: 5vw;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                }
+            }
+
+            &__desc {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                .wrap-title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 25px;
+
+                }
+
+                &__name {
+                    font-size: 27px;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+
+                &__text {
+                    margin-bottom: 35px;
+                    font-size: 20px;
+                    max-height: 120px;
+                    overflow: hidden;
+                    line-height: 1.5;
+                }
+
+                &__progress {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    .button {
+                        padding: 0px 30px;
+                        background: $light-yellow;
+                        margin-right: 2.2vw;
+                        height: 40px;
+                        white-space: nowrap;
+                        line-height: 40px;
+
+                    }
+
+                    .button.free {
+                        background: $red;
+                        color: #fff;
+                    }
+
+                    .properties {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .prop {
+                            font-size: 16px;
+                            font-weight: bold;
+                            margin-left: 18px;
+                            white-space: nowrap;
+                        }
+
+                        .prop:before {
+                            content: url(../img/lessons/check.svg);
+                            margin-right: 10px;
+                            position: relative;
+                            top: 3px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    .lessons-section .wrap-lessons__block__img {
+        min-width: 400px;
+    }
+
+    .lessons-section .wrap-school__block__desc__progress {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        .properties {
+            margin-bottom: 15px;
+
+            .prop {
+                margin-left: 0;
+                margin-right: 18px;
+            }
+        }
+    }
+
+    .lessons-section .wrap-school__block__desc__text {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .lessons-section .wrap-lessons__block__img {
+        min-width: 300px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__text {
+        line-height: 1.3;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__name {
+        font-size: 24px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__text {
+        font-size: 18px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__progress .button {
+        font-size: 16px;
+        padding: 0 30px;
+        line-height: 40px;
+    }
+
+    .lessons-section .wrap-school__block {
+        padding: 50px;
+    }
+
+    .lessons-section .wrap-school__block__img {
+        margin-right: 3vw;
+    }
+
+    .lessons-section .wrap-school__block__desc .wrap-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .lessons-section .wrap-school__block__desc__name {
+        margin-bottom: 10px;
+    }
+
+    .wrap-school .progress-bar {
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .lessons-section .wrap-lessons__block__desc__progress {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+
+    .lessons-section .wrap-lessons__block__img {
+        margin-right: 2vw;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__progress .button {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .lessons-section .wrap-school__block__desc__text {
+        font-size: 18px;
+        max-height: 130px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lessons-section .wrap-lessons__block {
+        flex-direction: column;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .lessons-section .wrap-lessons__block__img {
+        min-width: 200px;
+        margin-right: 0;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__name {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__text {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__progress {
+        margin-right: auto;
+        margin-left: 0;
+        align-items: flex-start;
+    }
+
+    .lessons-section .wrap-school__block {
+        flex-direction: column;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .lessons-section .wrap-school__block__img {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .lessons-section .wrap-school__block__img {
+        max-width: 100%;
+    }
+
+    .lessons-section .wrap-school__block__desc__text {
+        font-size: 16px;
+        max-height: 120px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .lessons-section {
+        padding-top: 50px;
+    }
+
+    .lessons-section .wrap-school__block {
+        border-radius: 15px;
+    }
+
+    .lessons-section .wrap-school__block__desc__name {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lessons-section .wrap-lessons__block__desc__progress {
+        margin-right: 0;
+        width: 100%;
+
+        .progress-bar {
+            width: 100%;
+        }
+    }
+
+    .wrap-school .progress-bar {
+        width: 100%;
+    }
+
+    .lessons-section .wrap-lessons__block__desc__progress .button {
+        font-size: 14px;
+    }
+
+    .lessons-section .wrap-school__block {
+        padding: 15px;
+    }
+}
